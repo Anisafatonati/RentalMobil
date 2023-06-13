@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MerkController;
 use App\Http\Controllers\MobilController;
+use App\Http\Controllers\TipeMobilController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,3 +40,11 @@ Route::post('/merk/simpan-data',[MerkController::class, 'store']);
 Route::get('/merk/edit/{id}', [MerkController::class, 'formEdit']);
 Route::post('/merk/update/{id}',[MerkController::class, 'update']);
 Route::get('/merk/delete/{id}',[MerkController::class, 'delete']);
+
+Route::get('/tipe_mobil',[TipeMobilController::class, 'index']);
+Route::get('/tipe_mobil/create',[TipeMobilController::class, 'create']);
+Route::post('/tipe_mobil/simpan-data',[TipeMobilController::class, 'store']);
+
+Route::get('/tipe_mobil/edit/{id}', [TipeMobilController::class, 'formEdit']);
+Route::post('/tipe_mobil/update/{id}',[TipeMobilController::class, 'update']);
+Route::get('/tipe_mobil/delete/{id}',[TipeMobilController::class, 'delete']);
